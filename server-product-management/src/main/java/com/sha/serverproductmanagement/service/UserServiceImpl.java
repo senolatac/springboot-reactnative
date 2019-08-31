@@ -10,12 +10,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
 
+	//It will be provided on WebSecurityConfig as @Bean
     @Autowired
     private PasswordEncoder passwordEncoder;
 

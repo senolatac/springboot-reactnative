@@ -37,13 +37,14 @@ public class UserController {
         if(userService.findByUsername(user.getUsername())!=null){
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
+		//default role.
         user.setRole(Role.USER);
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);
     }
 
     @GetMapping("/api/user/login")
     public ResponseEntity<?> getUser(Principal principal){
-
+		//principal = httpServletRequest.getUserPrincipal.
         if(principal == null){
             //logout will also use here so we should return ok http status.
             return ResponseEntity.ok(principal);
