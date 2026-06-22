@@ -19,7 +19,7 @@
     "rxjs": "^6.5.2"
   },
   "devDependencies": {
-    "@babel/core": "7.4.4",
+    "@babel/core": "7.29.6",
     "@babel/runtime": "7.4.4",
     "babel-jest": "24.8.0",
     "jest": "24.8.0",
